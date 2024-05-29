@@ -1,0 +1,89 @@
+﻿<Page x:Class="SuperMarket.View.EditPages.EditProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SuperMarket.View.EditPages"
+      mc:Ignorable="d" 
+      Height="350" Width="550"
+      Title="EditProductPage">
+
+    <Grid Background =" white">
+	    <TextBlock HorizontalAlignment="Center"
+	               VerticalAlignment="Top"
+	               TextWrapping="Wrap"
+	               Text="{Binding Title}"
+            
+	               Height="50" Width="200"
+	               FontSize="24" Margin="0,51,0,0"/>
+	    <TextBlock HorizontalAlignment="Left"
+	               Margin="75,145,0,0" 
+	               TextWrapping="Wrap" 
+	               Text="Name:"
+	               VerticalAlignment="Top"
+	               Height="30" Width="60" 
+	               FontSize="20"/>
+	    <TextBlock HorizontalAlignment="Left"
+	               Margin="75,200,0,0" 
+	               TextWrapping="Wrap" 
+	               Text="Barcode:"
+	               VerticalAlignment="Top"
+	               Height="30" Width="80" 
+	               FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="75,240,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="Category:"
+                   VerticalAlignment="Top"
+                   Height="30" Width="90" 
+                   FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="75,280,0,0"
+                   TextWrapping="Wrap" 
+                   Text="Producer:"
+                   VerticalAlignment="Top" 
+                   Height="30" Width="90"
+                   FontSize="20"/>
+        <Button Content="{Binding ButtonN}"
+                Command="{Binding Button}"
+                HorizontalAlignment="Left"
+                Margin="150,318,0,0" 
+                VerticalAlignment="Top"
+                Height="28" Width="106"/>
+	    <TextBox   HorizontalAlignment="Left"
+	               Margin="140,145,0,0" 
+	               TextWrapping="Wrap"
+	               Text="{Binding Name}"
+	               VerticalAlignment="Top" 
+	               Width="130" Height="30" FontSize="18"/>
+        <TextBox Text="{Binding Barcode}"
+                 HorizontalAlignment="Left"
+                 Margin="155,200,0,0" 
+                 TextWrapping="Wrap" 
+                 
+                 VerticalAlignment="Top"
+                 Height="30" Width="130" 
+                 FontSize="20"/>
+        <ComboBox ItemsSource="{Binding categoriesName}"
+                  SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" 
+                  HorizontalAlignment="Left"
+                  
+                  Margin="165,240,0,0" 
+                  
+                  
+                  VerticalAlignment="Top"
+                  Height="30" Width="130" 
+                  FontSize="20"/>
+        <ComboBox ItemsSource="{Binding producersName}"
+                  SelectedItem="{Binding SelectedProducer, Mode=TwoWay}" 
+                  HorizontalAlignment="Left"
+ 
+                  Margin="165,280,0,0" 
+ 
+ 
+                  VerticalAlignment="Top"
+                  Height="30" Width="130" 
+                  FontSize="20"/>
+
+    </Grid>
+</Page>
